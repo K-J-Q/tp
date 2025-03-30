@@ -7,6 +7,26 @@
 ## Design & implementation
 
 {Describe the design and implementation of the product. Use UML diagrams and short code snippets where applicable.}
+### Round Class (@K-J-Q)
+The Round class represents a game round in the Javatro card game system. It manages the core gameplay mechanics for a single round of play.
+
+#### Core Functionality
+The class provides methods to:
+- Play cards from the player's hand
+- Discard unwanted cards
+- Determine when a round is won or ended
+
+#### Tracks
+- Player State: Tracks the player's hand and jokers
+- Round Configuration: Stores settings like round name, description, and target score
+- Game State: Manages the current score, remaining plays, and discard actions
+
+#### Sub-classes
+It attempts to incoperate Single Responsibility Principle and delegates tasks to the following sub classes:
+- `RoundState`: Tracks mutable state values
+- `RoundConfig`: Stores configuration parameters
+- `RoundActions`: Encapsulates gameplay mechanics
+- `RoundObservable`: Implements observer pattern for UI updates
 
 
 ## Product scope
